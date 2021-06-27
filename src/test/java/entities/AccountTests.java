@@ -55,7 +55,7 @@ public class AccountTests {
 
     @Test
     public void withdrawShouldThrowExceptioneWhenInsuffucuentBalance() throws IllegalAccessException {
-        Assertions.assertThrows(IllegalAccessException.class, ()->{
+        Assertions.assertThrows(IllegalArgumentException.class, ()->{
             Account acc = AccountFactory.createAccount(800.0);
             acc.withdraw(801.0);
         });
